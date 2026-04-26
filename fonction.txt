@@ -1,0 +1,52 @@
+strerror : elle retourne un pointeur sur un char * ou il y a l erreur dedans
+
+gai_strerror : retourne un char * mais pour les erreurs de web (gay)
+
+-------------------------------------------------------------------------
+SOCKETS
+-------------------------------------------------------------------------
+socket : Crée le point de communication (le descripteur).
+
+bind : Lie le socket à une adresse (IP) et un port.
+
+listen : Prépare le socket à recevoir des connexions (pour le serveur).
+
+accept : Reçoit une nouvelle connexion entrante.
+
+connect : Établit une connexion vers un serveur.
+
+socketpair : Crée deux sockets déjà reliés (uniquement en local).
+
+send & recv : Transmettent et reçoivent des missives (similaires à write et read,
+                mais avec des drapeaux spécifiques au réseau).
+
+setsockopt : Règle les options du socket (comme la réutilisation du port).
+
+getsockname : Récupère l'adresse locale à laquelle le socket est lié.
+-------------------------------------------------------------------------
+CONVERTION ET REOLUTION RESEAUX
+-------------------------------------------------------------------------
+
+getaddrinfo & freeaddrinfo : Pour transformer un nom de domaine (comme "google.com") en structures d'adresses exploitables.
+
+gai_strerror : Pour traduire les erreurs spécifiques de getaddrinfo.
+
+getprotobyname : Pour obtenir le numéro d'un protocole (TCP, UDP) à partir de son nom.
+
+htons, htonl : Convertissent les nombres (short ou long) de l'ordre de l'hôte vers l'ordre du réseau.
+
+ntohs, ntohl : Font l'inverse (du réseau vers l'hôte).
+
+-------------------------------------------------------------------------
+SUREVEILLANCE 
+
+
+strerror, gai_strerror, errno, dup,
+dup2, fork, socketpair, htons, htonl, ntohs, ntohl,
+select, poll, epoll (epoll_create, epoll_ctl,
+epoll_wait), kqueue (kqueue, kevent), socket,
+accept, listen, send, recv, chdir, bind, connect,
+getaddrinfo, freeaddrinfo, setsockopt, getsockname,
+getprotobyname, fcntl, close, read, write, waitpid,
+kill, signal, access, stat, open, opendir, readdir
+and closedir

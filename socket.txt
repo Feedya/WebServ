@@ -1,0 +1,34 @@
+Tout sur les Sockets.
+
+majordome:
+    on aura 1 socket comme majordome qui va attendre qu un client
+    vient et lui lance une requette HTTP
+
+    apres que le serveur a compris que il y a un client
+    on va l accepter a rentrer avec accept()
+
+    accept va creer 1 nouvelle socket pour le client precis 
+
+socket :
+
+    AF_INET stipule que nous usons d'adresses IPv4.
+    SOCK_STREAM indique que nous exigeons le protocole TCP (fiable).
+    int majordome_fd = socket(AF_INET, SOCK_STREAM, 0);
+
+    AF_INET : 
+        AF = Adress Family
+        
+        INET = IPv4 les adresse qu on utilise mtn comme dans netpractice
+            exemple 123.32.3.12
+
+    SOCK_STREAM : 
+        protocole TCP = en gros ca veut dire que se qu on va resercoir vas 
+            etre decouper en petit morceaux de premier au dernier et
+            on va les reservoir dans l ordre si un manque il est redemander tout de suite
+
+
+accept : 
+        
+
+
+fepopadi@student.42lausanne.ch

@@ -1,0 +1,18 @@
+webserv:
+    c est un programme qui va ecouter/attendre pour des requettes HTML,
+    les traduire et leur repondre.
+
+quand on se connecte sur un site genre youtube ca va se traduire en IP de youtube
+un IP c est l equivalent d une adresse de ou tu habites.
+
+quand la page de youtube vas se charger on le bowser aura une recette html ou dedans
+il y aura des images etc et ils va envoyer des requettes au serveur (webserv) pour les avoir
+
+dans presque tout les cas quand le bowser demande des truques ce sont des fichier HTML/image
+pour chaqun de ces requettes c est des fichier 
+
+on peut aussi envoyer des requettes a des truques qui vont activer du code (C++ dnas notre cas)
+
+le language avec le quelle le bowser communique avec le serveur s appelle HTTP (Hypertext Transfer Protocol)
+
+

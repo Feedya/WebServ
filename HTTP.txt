@@ -1,0 +1,24 @@
+HTTP c est hyper text transfer protocol
+
+c est pas un language mais un protocol de communication
+il ne calcules pas il transmet des choses.
+
+
+c est un text brut avec une strcture
+
+il y a 2 HTTP different la question et la reponde
+
+par exemple le client pose une questions au serveur et le serveur va repondre.
+
+
+
+LA QUESTION: 
+    elle est composer de 3 parties 
+
+    PREMIERE PARTIE:
+        c est la methode de la questions par exemple GET (donnes moi) ou POST (elle donne qqc au serveur).
+    DEUXIEME PARTIE:
+        les precisions sur le client genre CHROME ou GOOGlE
+    TROISIEME PARTIE(facultatif):
+        contient les donnes envoyer.
+ 
