@@ -50,3 +50,21 @@ getaddrinfo, freeaddrinfo, setsockopt, getsockname,
 getprotobyname, fcntl, close, read, write, waitpid,
 kill, signal, access, stat, open, opendir, readdir
 and closedir
+
+//select() :
+//  permet de surveiller un grand nombre de fd
+// 
+//elle prend en parametre
+//  int select(int nfds, fd_set ∗readfds, fd_set ∗writefds, fd_set ∗exceptfds, struct timeval ∗timeout);
+//      
+//      int nfds : le nombre de socket a surveiller + 1
+//
+//      fd_set *readfds : un pointeur sur une structure binaire de fd(client)
+//
+//      fd_set ∗writefds : pointeur sur une reponse a un client seulement si le "tuyau" reseaux est encombre.
+//                              on l'utilise seulement si on a un tres gros fichier a envoyer a un client
+//
+//      fd_set ∗exceptfds : surveiller les conditions exceptionelles (rarement utiliser)
+//
+//      struct timeval *timeout : combien de temps select() doit attendre avant de give up
+//                                  on peut mettre NULL et il va attendre a l infinis

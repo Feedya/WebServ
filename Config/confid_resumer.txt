@@ -1,0 +1,56 @@
+le fichier config sera le fichier de bord de notre serveur
+en gros le serveur va trouver tout les info utiles a lui dans le fichier config
+
+notre config peut etre sois .json, ,yaml ou .conf 
+
+le fichiier config aura a l interieur
+
+1 : peut contenir 1 ou plusieurs paires d adresse de notre serveur genre
+        Écoute sur 127.0.0.1:8080 pour mon premier site.
+        Écoute aussi sur 192.168.1.15:9090 pour mon second site.
+
+2 : des pages pages pour les erreurs, genre erreur 404 (utilisateur est aller qqpart qui n existe pas)
+        bah on doit avoir une page specifique pour notre site
+
+3 : taille max de body pour les requette HTML.
+
+4 : 
+    Accepted HTTP methods
+    la liste de methode accepter pour chaque chemin
+        genre dans /home on ne peut pas faire de requettes POST
+    
+    HTTP redirection
+    si on a une route qui a demenager et qu un client demande l anciene route
+        il sera rediriger vers la nouvelle
+    
+    Root directory
+    racine specifique si par exemples /images pointe sur /tmp/photos
+     alors un visiteur cherchant /images/douglas_nue.jpeg il sera rediriger vers /tmp/photos/douglas_nue.jpeg
+
+    Directory listing
+    activer
+        si un visiteur demande un dossier qui n existe pas le serveur genere une liste de la ou il peut aller
+    pas activer
+        page erreur 403
+    
+    Default file
+    fichier par defauts c est souvent le index.html
+
+    UPLOAD 
+    si on autorise aux clients de faire POST ou peut
+
+
+    ca va ressembler a ca 
+
+    {
+        "route": "/telechargements",
+        "allowed_methods": ["GET", "POST"],
+        "root": "/var/www/uploads",
+        "autoindex": false,
+        "index": "upload.html",
+        "upload_store": "/tmp/received_files"
+    }
+
+5 : en gros notre serveur doit etre capable d executer du code si le client le demande
+        genre si il demande d executer calcul.cpp le serveur doit l executer et envoyer la reponse
+        du code au client
